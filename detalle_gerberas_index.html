@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Para Marian <3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="app">
+  <div class="glow"></div>
+  <div class="top">PARA TI MAILOB 🌸</div>
+
+  <div class="controls">
+    <button class="btn" onclick="replay()">↻ Ver de nuevo</button>
+  </div>
+
+  <audio id="bg-music" loop src="assets/musica.mp3"></audio>
+
+  <svg viewBox="0 0 700 800" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <radialGradient id="pink">
+        <stop stop-color="#ffb0d0"/>
+        <stop offset=".58" stop-color="#ff4f98"/>
+        <stop offset="1" stop-color="#c71965"/>
+      </radialGradient>
+      <radialGradient id="pink2">
+        <stop stop-color="#ffc5dc"/>
+        <stop offset=".58" stop-color="#ff70aa"/>
+        <stop offset="1" stop-color="#d82b73"/>
+      </radialGradient>
+      
+      <!-- Degradado para los tallos -->
+      <linearGradient id="stemGradient" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stop-color="#2d5718"/>
+        <stop offset="70%" stop-color="#63a33c"/>
+        <stop offset="100%" stop-color="#8ce058"/>
+      </linearGradient>
+
+      <filter id="blur"><feGaussianBlur stdDeviation="2"/></filter>
+    </defs>
+
+    <!-- Suelo -->
+    <ellipse class="ground" cx="350" cy="721" rx="285" ry="34"/>
+
+    <!-- Pétalos / destellos flotantes -->
+    <g>
+      <path class="floating" d="M100 650c-18-20 3-37 17-24 6 10-4 20-17 24z"/>
+      <path class="floating fp2" d="M585 690c-18-20 3-37 17-24 6 10-4 20-17 24z"/>
+      <path class="floating fp3" d="M155 510c-18-20 3-37 17-24 6 10-4 20-17 24z"/>
+      <path class="floating fp4" d="M530 520c-18-20 3-37 17-24 6 10-4 20-17 24z"/>
+    </g>
+
+    <!-- Lucérnagas / Chispas doradas centelleantes -->
+    <g>
+      <circle class="spark" cx="150" cy="265" r="3"/>
+      <circle class="spark s2" cx="540" cy="245" r="3"/>
+      <circle class="spark s3" cx="585" cy="370" r="2.5"/>
+      <circle class="spark s4" cx="120" cy="390" r="2.5"/>
+      <circle class="spark s2" cx="330" cy="180" r="2"/>
+      <circle class="spark s3" cx="220" cy="420" r="3"/>
+    </g>
+
+    <!-- Mariposas mágicas revoloteando -->
+    <g class="butterfly b1">
+      <path d="M-12 -8 C-20 -20 -5 -25 0 0 C5 -25 20 -20 12 -8 C20 5 5 15 0 0 C-5 15 -20 5 -12 -8 Z" fill="#ff99dd" opacity="0.85"/>
+    </g>
+    <g class="butterfly b2">
+      <path d="M-10 -6 C-16 -16 -4 -20 0 0 C4 -20 16 -16 10 -6 C16 4 4 12 0 0 C-4 12 -16 4 -10 -6 Z" fill="#ffd1b3" opacity="0.9"/>
+    </g>
+
+    <!-- Tres tallos con degradado de iluminación -->
+    <path class="stem" d="M220 715 C220 590 210 455 230 305"/>
+    <path class="stem stem2" d="M350 720 C350 585 335 425 350 245"/>
+    <path class="stem stem3" d="M480 715 C480 570 505 390 475 185"/>
+
+    <!-- Hojas -->
+    <g>
+      <path class="leaf d1" d="M220 585 C175 558 158 527 166 502 C204 510 224 540 220 585z"/>
+      <path class="leaf d2" d="M222 520 C263 490 288 495 297 517 C271 540 244 542 222 520z"/>
+      <path class="leaf d3" d="M350 570 C310 544 294 516 302 493 C337 500 356 529 350 570z"/>
+      <path class="leaf d4" d="M350 485 C390 454 415 460 424 481 C399 505 372 507 350 485z"/>
+      <path class="leaf d5" d="M482 570 C438 544 423 514 432 490 C468 499 487 527 482 570z"/>
+      <path class="leaf d6" d="M489 475 C530 447 553 453 561 474 C536 499 511 498 489 475z"/>
+      <path class="leaf d7" d="M477 390 C445 368 435 344 443 326 C471 332 486 354 477 390z"/>
+      <path class="leaf d8" d="M479 335 C510 313 531 318 538 336 C518 355 497 354 479 335z"/>
+      <path class="leaf d9" d="M351 410 C322 390 315 366 323 350 C350 357 361 379 351 410z"/>
+    </g>
+
+    <!-- GERBERA IZQUIERDA -->
+    <g transform="translate(230 292)">
+      <g class="flowerAnim fl1">
+        <g class="p1">
+          <ellipse rx="12" ry="62"/><ellipse rx="12" ry="62" transform="rotate(30)"/>
+          <ellipse rx="12" ry="62" transform="rotate(60)"/><ellipse rx="12" ry="62" transform="rotate(90)"/>
+          <ellipse rx="12" ry="62" transform="rotate(120)"/><ellipse rx="12" ry="62" transform="rotate(150)"/>
+        </g>
+        <g class="p2">
+          <ellipse rx="10" ry="51" transform="rotate(15)"/><ellipse rx="10" ry="51" transform="rotate(45)"/>
+          <ellipse rx="10" ry="51" transform="rotate(75)"/><ellipse rx="10" ry="51" transform="rotate(105)"/>
+          <ellipse rx="10" ry="51" transform="rotate(135)"/><ellipse rx="10" ry="51" transform="rotate(165)"/>
+        </g>
+        <circle class="inner" r="27"/><circle class="center" r="20"/>
+        <g class="dot"><circle cx="-8" cy="-4" r="2"/><circle cx="8" cy="-3" r="2"/><circle cx="0" cy="7" r="2"/></g>
+      </g>
+    </g>
+
+    <!-- GERBERA CENTRO -->
+    <g transform="translate(350 232)">
+      <g class="flowerAnim fl2">
+        <g class="p1">
+          <ellipse rx="13" ry="68"/><ellipse rx="13" ry="68" transform="rotate(30)"/>
+          <ellipse rx="13" ry="68" transform="rotate(60)"/><ellipse rx="13" ry="68" transform="rotate(90)"/>
+          <ellipse rx="13" ry="68" transform="rotate(120)"/><ellipse rx="13" ry="68" transform="rotate(150)"/>
+        </g>
+        <g class="p2">
+          <ellipse rx="11" ry="56" transform="rotate(15)"/><ellipse rx="11" ry="56" transform="rotate(45)"/>
+          <ellipse rx="11" ry="56" transform="rotate(75)"/><ellipse rx="11" ry="56" transform="rotate(105)"/>
+          <ellipse rx="11" ry="56" transform="rotate(135)"/><ellipse rx="11" ry="56" transform="rotate(165)"/>
+        </g>
+        <circle class="inner" r="29"/><circle class="center" r="21"/>
+        <g class="dot"><circle cx="-8" cy="-4" r="2"/><circle cx="8" cy="-3" r="2"/><circle cx="0" cy="7" r="2"/></g>
+      </g>
+    </g>
+
+    <!-- GERBERA DERECHA -->
+    <g transform="translate(475 172)">
+      <g class="flowerAnim fl3">
+        <g class="p1">
+          <ellipse rx="13" ry="70"/><ellipse rx="13" ry="70" transform="rotate(30)"/>
+          <ellipse rx="13" ry="70" transform="rotate(60)"/><ellipse rx="13" ry="70" transform="rotate(90)"/>
+          <ellipse rx="13" ry="70" transform="rotate(120)"/><ellipse rx="13" ry="70" transform="rotate(150)"/>
+        </g>
+        <g class="p2">
+          <ellipse rx="11" ry="58" transform="rotate(15)"/><ellipse rx="11" ry="58" transform="rotate(45)"/>
+          <ellipse rx="11" ry="58" transform="rotate(75)"/><ellipse rx="11" ry="58" transform="rotate(105)"/>
+          <ellipse rx="11" ry="58" transform="rotate(135)"/><ellipse rx="11" ry="58" transform="rotate(165)"/>
+        </g>
+        <circle class="inner" r="30"/><circle class="center" r="22"/>
+        <g class="dot"><circle cx="-8" cy="-4" r="2"/><circle cx="8" cy="-3" r="2"/><circle cx="0" cy="7" r="2"/></g>
+      </g>
+    </g>
+  </svg>
+
+  <!-- Tarjeta con efecto cristal Glassmorphism -->
+  <div class="message">
+    <div class="line1">3 gerberas para recordarte tres cosas:</div>
+    <div class="line2">te quiero, te extraño y te amo. <span class="heart">❤️</span></div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
