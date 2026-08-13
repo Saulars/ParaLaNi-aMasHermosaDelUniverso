@@ -309,15 +309,18 @@ svg {
     font-size: 34px;
   }
 
+  /* Ajustes del encabezado para dar margen y evitar colisiones */
   .top { 
-    font-size: 10px; 
-    letter-spacing: 2px; 
-    top: 14px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    top: 20px;
+    left: 12px;
+    transform: none; /* Alineado sutilmente a la izquierda */
   }
   
   .controls { 
     right: 12px; 
-    top: 10px; 
+    top: 14px; 
   }
   
   .btn { 
