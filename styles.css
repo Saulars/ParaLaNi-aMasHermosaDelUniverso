@@ -180,32 +180,30 @@ svg {
 .fp3 { animation-delay: 3.3s; }
 .fp4 { animation-delay: 4.7s; }
 
-/* Tarjeta de Mensaje Glassmorphism */
 /* Tarjeta de Mensaje Sutil y Compacta */
 .message {
   position: absolute;
   z-index: 8;
   left: 50%;
   bottom: 3%;
-  width: min(85%, 440px); /* Reducido de 580px a 440px */
+  width: min(85%, 440px);
   transform: translate(-50%, 25px);
   text-align: center;
   opacity: 0;
   
-  /* Cristal más transparente y fino */
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 182, 193, 0.12);
   border-radius: 16px;
-  padding: 10px 18px; /* Reducido de 16px 24px */
+  padding: 10px 18px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 
   animation: messageIn 1.4s ease-out 5.9s forwards;
 }
 
 .line1 {
-  font-size: clamp(12px, 1.4vw, 15px); /* Fuente más discreta */
+  font-size: clamp(12px, 1.4vw, 15px);
   font-weight: 300;
   letter-spacing: 0.5px;
   color: #e2cad5;
@@ -214,7 +212,7 @@ svg {
 .line2 {
   margin-top: 2px;
   font-family: 'Great Vibes', cursive;
-  font-size: clamp(26px, 3.8vw, 40px); /* Reducido el tamaño cursivo */
+  font-size: clamp(26px, 3.8vw, 40px);
   color: #ff70ac;
   text-shadow: 0 0 10px rgba(255, 112, 172, 0.35);
 }
@@ -232,6 +230,7 @@ svg {
   animation: floatUp 1.2s ease-out forwards;
 }
 
+/* Keyframes de Animaciones */
 @keyframes grow {
   to { stroke-dashoffset: 0; }
 }
@@ -289,21 +288,13 @@ svg {
   100% { opacity: 0; transform: translateY(-65px) scale(1.4); }
 }
 
+/* Media query optimizado para celular */
 @media (max-width: 650px) {
-  .top { font-size: 10px; letter-spacing: 2px; }
-  .controls { right: 10px; top: 12px; }
-  .btn { padding: 6px 10px; font-size: 11px; }
-  .message { bottom: 4%; padding: 12px 18px; }
-}
-/* Media query optimizado para pantallas de celular */
-@media (max-width: 650px) {
-  /* Escala todo el SVG para que las flores ocupen más espacio en pantalla */
   svg {
     transform: scale(1.22);
     transform-origin: center 55%;
   }
 
-  /* Hace la tarjeta de mensaje más ancha y con texto más grande */
   .message {
     width: 92%;
     bottom: 3.5%;
@@ -311,14 +302,13 @@ svg {
   }
 
   .line1 {
-    font-size: 15px; /* Un poco más legible */
+    font-size: 15px;
   }
 
   .line2 {
-    font-size: 34px; /* Aumenta el tamaño de la cursiva */
+    font-size: 34px;
   }
 
-  /* Ajuste sutil para los botones de arriba */
   .top { 
     font-size: 10px; 
     letter-spacing: 2px; 
@@ -335,4 +325,3 @@ svg {
     font-size: 11px; 
   }
 }
-
