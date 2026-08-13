@@ -309,22 +309,24 @@ svg {
     font-size: 34px;
   }
 
-  /* Ajustes del encabezado para dar margen y evitar colisiones */
+  /* Frase perfectamente centrada arriba con espacio para no chocar */
   .top { 
-    font-size: 9px;
-    letter-spacing: 1.5px;
-    top: 20px;
-    left: 12px;
-    transform: none; /* Alineado sutilmente a la izquierda */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 58%; /* Limita el ancho del texto para que no toque los bordes del botón */
+    text-align: center;
+    font-size: 8.5px;
+    letter-spacing: 1px;
+    top: 18px;
   }
   
   .controls { 
-    right: 12px; 
-    top: 14px; 
+    right: 10px; 
+    top: 12px; 
   }
   
   .btn { 
-    padding: 6px 12px; 
-    font-size: 11px; 
+    padding: 5px 10px; 
+    font-size: 10px; 
   }
 }
