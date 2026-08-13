@@ -295,3 +295,44 @@ svg {
   .btn { padding: 6px 10px; font-size: 11px; }
   .message { bottom: 4%; padding: 12px 18px; }
 }
+/* Media query optimizado para pantallas de celular */
+@media (max-width: 650px) {
+  /* Escala todo el SVG para que las flores ocupen más espacio en pantalla */
+  svg {
+    transform: scale(1.22);
+    transform-origin: center 55%;
+  }
+
+  /* Hace la tarjeta de mensaje más ancha y con texto más grande */
+  .message {
+    width: 92%;
+    bottom: 3.5%;
+    padding: 14px 18px;
+  }
+
+  .line1 {
+    font-size: 15px; /* Un poco más legible */
+  }
+
+  .line2 {
+    font-size: 34px; /* Aumenta el tamaño de la cursiva */
+  }
+
+  /* Ajuste sutil para los botones de arriba */
+  .top { 
+    font-size: 10px; 
+    letter-spacing: 2px; 
+    top: 14px;
+  }
+  
+  .controls { 
+    right: 12px; 
+    top: 10px; 
+  }
+  
+  .btn { 
+    padding: 6px 12px; 
+    font-size: 11px; 
+  }
+}
+
